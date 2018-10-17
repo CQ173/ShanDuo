@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <FrameLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorAccent"
+        >
+
+        <ImageView
+            android:id="@+id/tv_md_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:src="@drawable/icon_back_arrow"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/egg_font_size_xxx"
+            android:textColor="@color/mainfont"
+            android:text="@string/My_dynamics"
+            />
+
+        <TextView
+            android:id="@+id/tv_md_Release"
+            android:layout_gravity="end|center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/title_activity"
+            android:textColor="@color/signin"
+            android:textSize="@dimen/egg_font_size_xxx"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            />
+
+    </FrameLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/sr_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yapin.shanduo.widget.LoadMoreRecyclerView
+        android:id="@+id/recycler_my_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.yapin.shanduo.widget.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:visibility="gone"
+            android:background="@color/colorAccent"
+            android:id="@+id/bt_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="全选" />
+
+        <Button
+            android:background="@color/colorAccent"
+            android:id="@+id/bt_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="删除" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

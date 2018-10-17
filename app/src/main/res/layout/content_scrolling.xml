@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.ScrollingActivity"
+    android:fillViewport="true"
+    tools:showIn="@layout/activity_scrolling">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:gravity="center"
+            >
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/sliding_tab"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            app:tl_indicator_color="@color/tab_indicator_color"
+            app:tl_indicator_width="30dp"
+            app:tl_indicator_height="3dp"
+            app:tl_indicator_corner_radius="1dp"
+            app:tl_indicator_gravity="BOTTOM"
+            app:tl_indicator_style="NORMAL"
+            app:tl_tab_space_equal="true"
+            app:tl_textsize="15sp"
+            app:tl_textSelectColor="@color/home_title_color"
+            app:tl_textUnselectColor="@color/font_color_gray"
+            />
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

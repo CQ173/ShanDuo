@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_publish_act"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/ll_publish_trend"
+        android:layout_marginBottom="123dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_act_publish"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/publish_act"
+            android:gravity="center"
+            android:textSize="@dimen/egg_font_size_xxx"
+            android:textColor="@color/home_title_color"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_publish_trend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/iv_dismiss"
+        android:layout_marginBottom="105dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_trend_publish"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/publish_trend"
+            android:gravity="center"
+            android:textSize="@dimen/egg_font_size_xxx"
+            android:textColor="@color/home_title_color"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_publish_cross"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        />
+
+</RelativeLayout>

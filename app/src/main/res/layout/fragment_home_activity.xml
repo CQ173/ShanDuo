@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.HomeActivityFragment"
+    android:background="@color/white"
+    >
+
+    <com.yapin.shanduo.widget.VpSwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_ban"
+                        android:layout_width="match_parent"
+                        android:layout_height="168dp"
+                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:scaleType="fitXY"
+                            />
+
+                    </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    >
+
+                    <com.flyco.tablayout.SlidingTabLayout
+                        android:id="@+id/sliding_tab"
+                        android:layout_width="280dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        app:tl_indicator_color="@color/tab_indicator_color"
+                        app:tl_indicator_width="30dp"
+                        app:tl_indicator_height="3dp"
+                        app:tl_indicator_corner_radius="1dp"
+                        app:tl_indicator_gravity="BOTTOM"
+                        app:tl_indicator_style="NORMAL"
+                        app:tl_tab_space_equal="true"
+                        app:tl_textsize="15sp"
+                        app:tl_textSelectColor="@color/home_title_color"
+                        app:tl_textUnselectColor="@color/font_color_gray"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/bg_color"
+                    android:layout_below="@+id/ll_tag"
+                    />
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+</com.yapin.shanduo.widget.VpSwipeRefreshLayout>
+
+</RelativeLayout>

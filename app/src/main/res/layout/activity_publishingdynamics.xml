@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorAccent"
+        >
+
+        <TextView
+            android:id="@+id/tv_pd_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:text="@string/cancel"
+            android:textSize="15dp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/mainfont"
+            android:text="动态发布"
+            />
+
+        <TextView
+            android:id="@+id/tv_pd_Publish"
+            android:layout_gravity="right|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发表"
+            android:textColor="@color/signin"
+            android:textSize="15dp"
+            />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/tv_pd_text"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="说说你觉得有趣儿的事吧！"
+        android:gravity="left|top"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:textSize="15dp"
+        android:background="@color/colorAccent"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/test_cursor_shape"
+        />
+    <!--android:textColor="@color/textview_text"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <com.yapin.shanduo.widget.ShowAllRecyclerView
+            android:id="@+id/rv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_pd_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_place"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_icon"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/rv_show"
+        android:paddingLeft="10dp"
+        android:background="@color/colorAccent"
+        android:visibility="gone"
+        >
+
+        <ImageButton
+            android:id="@+id/ib_pd_Expression"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_pd_wechat"
+            />
+
+        <ImageButton
+
+            android:layout_marginLeft="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:src="@drawable/icon_pd_micro_blog"
+            />
+
+        <ImageButton
+            android:layout_marginLeft="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:src="@drawable/icon_pd_qq"
+            />
+
+    </LinearLayout>
+    <ScrollView
+        android:paddingBottom="10dp"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom" >
+
+        <ImageButton
+            android:background="@color/colorAccent"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_pd_expression"
+            />
+        <ImageButton
+            android:id="@+id/ib_pick_photo"
+            android:background="@color/colorAccent"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_pd_photograph"
+            />
+        <ImageButton
+            android:id="@+id/ib_take_photo"
+            android:background="@color/colorAccent"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_pd_image"
+            />
+        <ImageButton
+            android:id="@+id/ib_pd_Location"
+            android:background="@color/colorAccent"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_pd_location"
+            />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

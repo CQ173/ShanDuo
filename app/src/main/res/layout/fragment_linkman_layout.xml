@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.LinkManFragment"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_link"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textColor="@color/home_title_color"
+            />
+
+        <ImageView
+            android:id="@+id/iv_add_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_link_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_text_bg"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_search"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icon_link_search"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_search_friend"
+                android:textSize="@dimen/egg_font_size"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/font_color_gray"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_text_bg"
+        />
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/sliding_tab"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            app:tl_indicator_color="@color/tab_indicator_color"
+            app:tl_indicator_width="30dp"
+            app:tl_indicator_height="3dp"
+            app:tl_indicator_corner_radius="1dp"
+            app:tl_indicator_gravity="BOTTOM"
+            app:tl_indicator_style="NORMAL"
+            app:tl_tab_space_equal="true"
+            app:tl_textsize="15sp"
+            app:tl_textSelectColor="@color/home_title_color"
+            app:tl_textUnselectColor="@color/font_color_gray"
+            />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

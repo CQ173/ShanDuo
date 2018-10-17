@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_padding_left">15dp</dimen>
+    <dimen name="font_size">15dp</dimen>
+
+    <dimen name="act_item_font_size">12dp</dimen>
+
+    <dimen name="share_font_size">10dp</dimen>
+
+    <dimen name="cpb_default_stroke_width">4dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="home_align_bottom">3dp</dimen>
+    <dimen name="home_title_size">8sp</dimen>
+
+    <dimen name="title_size">15sp</dimen>
+
+    <dimen name="normal_font_size_small">10dp</dimen>
+    <dimen name="normal_font_size_big">12dp</dimen>
+
+    <dimen name="egg_font_size">10sp</dimen>
+    <dimen name="egg_font_size_big">12sp</dimen>
+    <dimen name="egg_font_size_xx">13sp</dimen>
+    <dimen name="egg_font_size_xxx">15sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+</resources>

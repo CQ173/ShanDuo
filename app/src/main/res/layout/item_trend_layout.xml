@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/rl_title"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_trend_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="8dp"
+        android:layout_below="@+id/tv_tag"
+        android:background="@color/color_white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/head"
+                android:layout_centerVertical="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_head"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小猪佩奇"
+                    android:textColor="@color/home_title_color"
+                    android:textSize="12dp"
+                    android:paddingBottom="2dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/tv_name"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_home_age"
+                        android:layout_width="25dp"
+                        android:layout_height="10dp"
+                        android:text="23"
+                        android:textSize="7sp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/rounded_tv_sex_women"
+                        android:textColor="@color/color_white"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/icon_women"
+                        android:drawablePadding="2dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_vip"
+                        android:layout_width="25dp"
+                        android:layout_height="10dp"
+                        android:text="SVIP2"
+                        android:textSize="7sp"
+                        android:background="@drawable/rounded_tv_vip"
+                        android:textColor="@color/color_white"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_lv"
+                        android:layout_width="25dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/rounded_tv_level"
+                        android:gravity="center"
+                        android:text="LV1"
+                        android:textColor="@color/color_white"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="7sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_mile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.6km"
+                android:textSize="@dimen/act_item_font_size"
+                android:textColor="@color/location_blue"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/icon_place"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_user_info"
+            android:text="最近都不太想动"
+            android:textColor="@color/home_title_color"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="12dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_content"
+            >
+            <RelativeLayout
+                android:id="@+id/rl_img1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_img1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_img2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_img1"
+                    />
+
+            </RelativeLayout>
+
+            <com.yapin.shanduo.widget.MyGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:visibility="gone"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                >
+
+            </com.yapin.shanduo.widget.MyGridView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                >
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5-11"
+                    android:textSize="@dimen/normal_font_size_small"
+                    android:textColor="@color/font_color_gray"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_publish_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刚刚"
+                    android:textSize="@dimen/normal_font_size_small"
+                    android:textColor="@color/font_color_gray"
+                    android:layout_marginLeft="17dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl_trend_info"
+        android:background="@color/bg_color"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_gray"
+        android:paddingTop="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="8dp"
+        android:background="@color/color_white"
+        >
+
+        <TextView
+            android:id="@+id/tv_replay_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_gray_comment"
+            android:text="111"
+            android:textColor="@color/font_color_gray"
+            android:textSize="10dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:drawablePadding="6dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/shine_button"
+            android:layout_marginStart="8dp"
+            android:text="111"
+            android:textColor="@color/font_color_gray"
+            android:textSize="@dimen/egg_font_size"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            />
+
+        <com.sackcentury.shinebuttonlib.ShineButton
+            android:id="@+id/shine_button"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:src="@android:color/darker_gray"
+            app:btn_color="@android:color/darker_gray"
+            app:btn_fill_color="#FF6666"
+            app:allow_random_color="false"
+            app:enable_flashing="false"
+            app:big_shine_color="#FF6666"
+            app:click_animation_duration="200"
+            app:shine_animation_duration="1500"
+            app:shine_turn_angle="10"
+            app:small_shine_offset_angle="20"
+            app:small_shine_color="#CC9999"
+            app:siShape="@raw/like"
+            android:layout_toEndOf="@+id/tv_replay_count"
+            android:layout_marginStart="12dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_three_point"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/rl_like"
+        android:background="@color/bg_color"
+        />
+
+</RelativeLayout>
